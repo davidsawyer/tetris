@@ -1,0 +1,12 @@
+{
+    "name": "tetris",
+    "version": "1.0.0",
+
+    "dependencies": {
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-compress": "latest",
+        "grunt-contrib-watch": "latest"
+    }
+}

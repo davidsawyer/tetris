@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script src="/compiled/tetris.js"></script>
+    <style>
+        body {
+            font-family: Menlo, Consolas, Monaco, Lucida Console,
+                Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+                Courier New, monospace, serif;
+                text-align: center;
+        }
+        h1 {
+            color: #272822;
+            margin-bottom: 0;
+        }
+        .author {
+            font-size: 0.5em;
+        }
+        p {
+            font-size: 0.7em;
+            margin-top: 0.4em;
+        }
+        canvas {
+            background: #272822;
+            border: 2px solid #272822;
+            border-bottom-width: 0;
+            border-right-width: 0;
+            display: block;
+        }
+        #tetris {
+            float: left;
+            margin-left: 11em;
+        }
+        #sidekick {
+            float: right;
+        }
+        .wrapper {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 38.4em;
+        }
+        .instructions {
+            float: right;
+            font-size: 1.1em;
+            margin-top: 1em;
+            text-align: left;
+            width: 156px;
+        }
+        .key {
+            display: inline-block;
+            width: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tetris<span class="author"> by David Sawyer</span></h1>
+    <p>Color scheme inspired by the <br>Monokai theme for Sublime Text</p>
+    <div class="wrapper">
+        <canvas id="tetris" height="520" width="260"></canvas>
+        <canvas id="sidekick" height="260" width= "156"></canvas>
+        <div class="instructions">
+            <p><span class="key">left</span> &rarr; shift left</p>
+            <p><span class="key">right</span> &rarr; shift right</p>
+            <p><span class="key">down</span> &rarr; shift down</p>
+            <p><span class="key">space</span> &rarr; hard drop</p>
+            <p><span class="key">X</span> &rarr; rotate CW</p>
+            <p><span class="key">Z</span> &rarr; rotate CCW</p>
+        </div>
+    </div>
+</body>
+<script src="//localhost:35729/livereload.js"></script>
+</html>
