@@ -38,8 +38,6 @@ function restartGame() {
 function updateActive() {
     if (! isGameOver) {
         activeTetrimino.update();
-    } else {
-
     }
 }
 
