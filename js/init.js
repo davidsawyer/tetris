@@ -95,7 +95,8 @@ function clearLine(blocks, currentY) {
 
     for (var i = 0; i < blocks.length; i++) {
         blocks[i].clear();
-        blocks[i].y += UNIT;
+        blocks[i].x += UNIT * 15; // kick these guys logically off the canvas
+        blocks[i].y += UNIT * 25;
     }
 
     for (i = 0; i < tetriminoPool.length; i++) {
