@@ -16,11 +16,13 @@ var UNIT = 26,
     DOWN = 40,
     X = 88,
     Z = 90,
+    P = 80,
     darkGray = "#272822",
     canvasElem,
     sidekickElem,
     score = 0,
-    onDeckTetrimino = new Tetrimino(true);
+    onDeckTetrimino = new Tetrimino(true),
+    paused = false;
 
 function restartGame() {
     canvasElem.style.opacity = "1";
@@ -142,6 +144,21 @@ function handleKeyDown(event) {
         case Z:
             activeTetrimino.rotate("CCW");
             break;
+        case P:
+            pauseGame();
+            break;
+    }
+}
+
+function pauseGame() {
+    if (paused) {
+        refreshIntervalId = setInterval(updateActive, INTERVAL);
+        canvasElem.style.opacity = "1";
+        paused = false;
+    } else {
+        clearInterval(refreshIntervalId);
+        canvasElem.style.opacity = "0.7";
+        paused = true;
     }
 }
 
