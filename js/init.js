@@ -120,6 +120,10 @@ function clearLine(blocks, currentY) {
 }
 
 function handleKeyDown(event) {
+    if (event.keyCode !== P && paused) {
+        return;
+    }
+
     if (isGameOver) {
         restartGame();
         return;
